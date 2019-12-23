@@ -1,0 +1,5 @@
+istioctl manifest \
+  apply --set "values.pilot.traceSampling=10.0" \
+  --set "values.grafana.enabled=true" \
+  --set "values.kiali.enabled=true" \
+  --set "values.global.tracer.zipkin.address=jaeger-collector.observability:9411"
